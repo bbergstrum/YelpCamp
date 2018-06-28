@@ -138,6 +138,16 @@ Each Campground has:
 * re-styled landing page
 * added background animations/slider
 
+#Login & Register page refactored
+* changed styling of the login and register page
+* fixed inputs and forms to display neatly and correctly
+* changed button sizes
+
+#Edit & Update pages refactored
+* changed styling of edit and update pages
+* fixed inputs and forms to display neatly and correctly
+* changed button sizes
+
 
 RESTFUL ROUTES
 
