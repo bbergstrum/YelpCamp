@@ -1,0 +1,68 @@
+body {
+    background-image: url("https://images.unsplash.com/photo-1500370414137-9201565cf099?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=95e700b9e28eb7ed7b5769c823741126&auto=format&fit=crop&w=2734&q=80");
+    
+}
+
+.thumbnail {
+    padding: 0;
+}
+.thumbnail img {
+    width: 100%;
+}
+
+.thumbnail .caption-full {
+    padding: 9px;
+}
+
+.row .text-center {
+    display: flex; 
+    flex-wrap: wrap;
+}
+
+.delete-form {
+    display: inline;
+}
+
+.back {
+    margin: 10px;
+}
+
+.form-group {
+    width: 95%;
+    padding-left: 25px;
+    margin: 5px 5px;
+    padding-bottom: 5px
+}
+
+#signupheader {
+    text-align: center;
+}
+
+h1 {
+text-align: center;
+}
+
+.new{
+    width: 50%;
+}
+
+.form-group-submit {
+    margin-left: 75%;
+    padding-right: 4.8%;
+}
+
+hr {
+    margin: 2em;
+}
+
+.form-display {
+    display: inline-block;
+}
+
+.camp-form {
+    max-width: 500px;
+}
+
+#searchbar {
+    width: 70%;
+}
