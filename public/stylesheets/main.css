@@ -3,6 +3,12 @@ body {
     
 }
 
+/* Google Maps */
+#map {
+    height: 400px;
+    width: 100%;
+}
+
 .thumbnail {
     padding: 0;
 }

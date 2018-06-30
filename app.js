@@ -1,5 +1,7 @@
 // =============================================================================
 //                              Dependencies
+        require("dotenv").config();
+        
 var     express                 = require("express"),
         app                     = express(),
         bodyParser              = require("body-parser"),
@@ -21,8 +23,9 @@ var     campgroundsRoutes       = require("./routes/campgrounds"),
 // =============================================================================
 //                              App Config
 // Local Mongo DB
-// mongoose.connect("mongodb://localhost/yelp_camp");
-mongoose.connect(process.env.DATABASEURL);
+mongoose.connect("mongodb://localhost/yelp_camp");
+// DB ENV
+// mongoose.connect(process.env.DATABASEURL);
 // MONGOLAB HEROKU DB
 // mongoose.connect("mongodb://bbyelp:bbyelp123@ds221271.mlab.com:21271/bbwebdev_yelpcamp");
 

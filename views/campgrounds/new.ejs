@@ -7,13 +7,20 @@
             <div>
                 <form action="/campgrounds" method="post">
                     <div class="form-group">
-                        <input class="form-control" type="text" name="name" placeholder="name">
+                        <label for="name">Campground Name</label>
+                        <input class="form-control" type="text" name="name" placeholder="eg. Granny's Flat Campground">
                     </div>
                     <div class="form-group">
-                        <input class="form-control" type="text" name="image" placeholder="img url">
+                        <label for="image">Image URL</label>
+                        <input class="form-control" type="text" name="image" placeholder="eg. http://www.image.com">
                     </div>
                     <div class="form-group">
-                        <input class="form-control" type="text" name="description" placeholder="Brief description">
+                        <label for="description">Description</label>
+                        <input class="form-control" type="text" name="description" placeholder="Brief description of campground">
+                    </div>
+                    <div class="form-group">
+                        <label for="location">Location</label>
+                        <input class="form-control" type="text" name="location" id="location" placeholder="eg. Mount Buller, Australia">
                     </div>
                     <div class="form-group-submit">
                         <button class="btn btn-md btn-primary btn-block">Submit</button>
