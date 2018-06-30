@@ -22,12 +22,10 @@ var     campgroundsRoutes       = require("./routes/campgrounds"),
         indexRoutes             = require("./routes/index");
 // =============================================================================
 //                              App Config
-// Local Mongo DB
-mongoose.connect("mongodb://localhost/yelp_camp");
+
 // DB ENV
-// mongoose.connect(process.env.DATABASEURL);
-// MONGOLAB HEROKU DB
-// mongoose.connect("mongodb://bbyelp:bbyelp123@ds221271.mlab.com:21271/bbwebdev_yelpcamp");
+mongoose.connect(process.env.DATABASEURL);
+
 
 
 app.use(bodyParser.urlencoded({extended: true}));
