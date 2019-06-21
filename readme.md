@@ -1,167 +1,57 @@
-#YelpCamp
+# Yelpcamp 
+---
+Yelpcamp is a fictitious web based application which posts crowd-sourced reviews about local campgrounds
+Yelpcamp is based off the popular Yelp.com (a web based application which posts crowd-sourced reviews about local businesses).
+## Features
+---
+#### Users
+  - View campgrounds available.
+  - Sign-up with their own credentials and create their own account.
+  - Login with their account credentials.
+  - Create, post and comment on campgrounds.
+  - Remove own posts and comments.
+#### Campgrounds
+  - View a variety of campgrounds.
+  - Select individual campgrounds for further information.
+  - Each campground has a description, an image and a location.
+  - Each campground location is viewed using a Google maps API plugin.
+### Technology
+---
+Yelpcamp is a full-stack web application with a non-relational database.
+Yelpcamp utilizes a variety of open-source libraries and frameworks. 
 
-##Initial Setup
-* Add Landing Page
-* Add Campgrounds Page that lists all campgrounds
+Front-end
+* [Javascript](https://developer.mozilla.org/en-US/docs/Web/JavaScript) - high-level, interpreted programming language.
+* [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML) - standard mark-up language for creating web pages and web applications.
+* [Bootstrap](https://getbootstrap.com/) - open source toolkit for developing with HTML, CSS, and JS.
+* [jQuery](https://jquery.com/) -  cross-platform JavaScript library designed to simplify the client-side scripting of HTML.
 
-Each Campground has:
-   * Name
-   * Image
+Back-end
+* [node.js](https://nodejs.org/en/) - JavaScript run-time environment that executes JavaScript code server-side. 
+* [express.js](https://expressjs.com/) - minimalist web framework for Node.js
+* [mongoDB](https://www.mongodb.com/) - open-source cross-platform document-oriented database program.
+* [mongoose.js](https://mongoosejs.com/) - mongodb object modelling for Node.js.
+* [moment.js](https://momentjs.com/) - parse, validate, manipulate, and display dates and times in JavaScript.
+* [node-geocoder](https://github.com/nchaulet/node-geocoder#readme) - Node.js library for geocoding and reverse geocoding.
+* [method-overide](https://github.com/expressjs/method-override#readme) - override HTTP verbs.
 
-##Layout and Basic Styling
-* Create our header and footer partials
-* Add in Bootstrap
+Middleware
+* [express-session](https://github.com/expressjs/session) - session middleware for Express.js
+* [passport.js](http://www.passportjs.org/) - authentication for Node.js.
+* [connect-flash](https://github.com/jaredhanson/connect-flash) - flash message middleware for Connect and Express.js
+* [body-parser](https://github.com/expressjs/body-parser#readme) - Node.js body parsing middleware
+### Plugins
+---
+Yelpcamp utilizes Google maps API to stage the location of campgrounds.
+[Google Maps API](https://cloud.google.com/maps-platform/)
+### Deployment
+---
+You can find the deployed front end here: [Yelpcamp](https://murmuring-basin-79570.herokuapp.com/)
+Yelpcamp is deployed on [Heroku](https://www.heroku.com/) (a cloud application platform) with intentions to migrate to AWS in the future.
+### Development
+---
+To view development stages please refer to the development readme in this reposoitory.
 
-##Creating New Campgrounds
-* Setup new campground POST route
-* Add in body-parser
-* Setup route to show form
-* Add basic unstyled form
-
-##Style the campgrounds page
-* Add a better header/title
-* Make campgrounds display in a grid
-
-##Style the Navbar and Form
-* Add a navbar to all templates
-* Style the new campground form
-
-##Add Mongoose
-* Install and configure Mongoose
-* Setup campground model
-* Use campground model inside of our routes
-
-##Show Page
-* Review the RESTful routes we've seen so far
-* Add description to our campground model
-* Show db.collection.drop()
-* Add a show route/template
-
-##Refactor Mongoose Code
-* Create a models directory
-* Use module.exports
-* Require everything correctly!
-
-##Add Seeds File
-* Add a seeds.js file
-* Run the seeds file every time the server starts
-
-##Add the Comment model!
-* Make our errors go away!
-* Display comments on campground show page
-
-##Comment New/Create
-* Discuss nested routes
-* Add the comment new and create routes
-* Add the new comment form
-
-##Style Show Page
-* Add sidebar to show page
-* Display comments nicely
-
-##Finish Styling Show Page
-* Add public directory
-* Add custom stylesheet
-
-##Auth Pt. 1 - Add User Model
-* Install all packages needed for auth
-* Define User model 
-
-##Auth Pt. 2 - Register
-* Configure Passport
-* Add register routes
-* Add register template
-
-##Auth Pt. 3 - Login
-* Add login routes
-* Add login template
-
-##Auth Pt. 4 - Logout/Navbar
-* Add logout route
-* Prevent user from adding a comment if not signed in
-* Add links to navbar
-
-##Auth Pt. 5 - Show/Hide Links
-* Show/hide auth links in navbar 
-
-##Refactor The Routes
-* Use Express router to reoragnize all routes
-
-##Users + Comments
-* Associate users and comments
-* Save author's name to a comment automatically
-
-##Users + Campgrounds
-* Prevent an unauthenticated user from creating a campground
-* Save username+id to newly created campground
-
-# Editing Campgrounds
-* Add Method-Override
-* Add Edit Route for Campgrounds
-* Add Link to Edit Page
-* Add Update Route
-
-#Deleting Campgrounds
-* Add Destroy Route
-* Add Delete button
-
-#Authorization Part 1: Campgrounds
-* User can only edit his/her campgrounds
-* User can only delete his/her campgrounds
-* Hide/Show edit and delete buttons
-
-#Editing Comments
-* Add Edit route for comments
-* Add Edit button
-* Add Update route
-
-<!--/campgrounds/:id/edit-->
-<!--/campgrounds/:id/comments/:comment_id/edit-->
-
-#Deleting Comments
-* Add Destroy route
-* Add Delete button
-
-#Authorization Part 2: Comments
-* User can only edit his/her comments
-* User can only delete his/her comments
-* Hide/Show edit and delete buttons
-* Refactor Middleware
-
-#Adding in Flash!
-* Demo working version
-* Install and configure connect-flash
-* Add bootstrap alerts to header
-
-#Landing page refactored
-* Added seperate landing.css
-* re-styled landing page
-* added background animations/slider
-
-#Login & Register page refactored
-* changed styling of the login and register page
-* fixed inputs and forms to display neatly and correctly
-* changed button sizes
-
-#Edit & Update pages refactored
-* changed styling of edit and update pages
-* fixed inputs and forms to display neatly and correctly
-* changed button sizes
-
-
-RESTFUL ROUTES
-
-name      url      verb    desc.
-===============================================
-INDEX   /dogs      GET   Display a list of all dogs
-NEW     /dogs/new  GET   Displays form to make a new dog
-CREATE  /dogs      POST  Add new dog to DB
-SHOW    /dogs/:id  GET   Shows info about one dog
-
-INDEX   /campgrounds
-NEW     /campgrounds/new
-CREATE  /campgrounds
-SHOW    /campgrounds/:id
-
-NEW     campgrounds/:id/comments/new    GET
-CREATE  campgrounds/:id/comments      POST
+### License
+----
+MIT
