@@ -59,8 +59,12 @@ To setup a clone of YelpCamp on an EC2 follow the following steps:
     (replace <user> and <password> with valid mongoDB credentials).
 ### Deployment
 ---
-You can find the deployed front end here: [Yelpcamp](https://murmuring-basin-79570.herokuapp.com/)
-Yelpcamp is deployed on [Heroku](https://www.heroku.com/) (a cloud application platform) with intentions to migrate to AWS in the future.
+  
+You can find the deployed front end here: [Yelpcamp](http://ec2-54-211-17-84.compute-1.amazonaws.com:8080/)
+Yelpcamp has been deployed with in an AWS environment running on an EC2.
+
+You can also find the deployed front end here: [Yelpcamp](https://murmuring-basin-79570.herokuapp.com/)
+Yelpcamp previously deployed on [Heroku](https://www.heroku.com/) (a cloud application platform).
 ### Development
 ---
 To view development stages please refer to the development readme in this reposoitory.
