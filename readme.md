@@ -44,6 +44,19 @@ Middleware
 ---
 Yelpcamp utilizes Google maps API to stage the location of campgrounds.
 [Google Maps API](https://cloud.google.com/maps-platform/)
+### EC2 Setup
+---
+To setup a clone of YelpCamp on an EC2 follow the following steps:
+  1. update the EC2 by the command: `sudo yum update`.
+  2. install git by using the command: `sudo yum install git`.
+  3. install npm by using the command: `sudo yum install npm`.
+  4. install node by using the command: `sudo yum install node`.
+  5. clone YelpCamp by using the command: `git clone https://github.com/bbergstrum/YelpCamp.git`.
+  6. install all of YelpCamp's node packages by using the command `npm install -g`
+  7. install forever by using the command: `npm install -g forever`.
+  8. launch YelpCamp with environment variables using forever by using the command: 
+    `DATABASEURL="mongodb://<user>:<password>@ds221271.mlab.com:21271/bbwebdev_yelpcamp" PORT=8080 IP="0.0.0.0" forever start app.js`.
+    (replace <user> and <password> with valid mongoDB credentials).
 ### Deployment
 ---
 You can find the deployed front end here: [Yelpcamp](https://murmuring-basin-79570.herokuapp.com/)
