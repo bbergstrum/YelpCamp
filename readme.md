@@ -55,7 +55,10 @@ To setup a clone of YelpCamp on an EC2 follow the following steps:
   6. install all of YelpCamp's node packages by using the command `npm install -g`
   7. install forever by using the command: `npm install -g forever`.
   8. launch YelpCamp with environment variables using forever by using the command: 
-    `DATABASEURL="mongodb://<user>:<password>@ds221271.mlab.com:21271/bbwebdev_yelpcamp" PORT=8080 IP="0.0.0.0" forever start app.js`.
+    [Depricated] `DATABASEURL="mongodb://<user>:<password>@ds221271.mlab.com:21271/bbwebdev_yelpcamp" PORT=8080 IP="0.0.0.0" forever start app.js`.
+
+    New connection string after migration from mlab to Atlas:
+    `DATABASEURL="mongodb+srv://<username>:<password>@yelpcampcluster.hyj7z.mongodb.net/bbwebdev_yelpcamp?retryWrites=true&w=majority" PORT=8080 IP="0.0.0.0" forever start     app.js`.
     (replace <user> and <password> with valid mongoDB credentials).
 ### Deployment
 ---
